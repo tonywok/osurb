@@ -1,0 +1,308 @@
+body {
+  margin: 0 auto; 
+  width: 100%;
+  font-family: Helvetica,Arial,sans-serif;
+  background-color: #f6f4d4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #wrap {
+  height: 100%;
+}
+
+body > #wrap {
+  height: auto; 
+  min-height: 100%;
+}
+
+#container {
+  padding-bottom: 150px;
+}
+
+
+#header {
+  margin: 0 auto;
+  width: 60em;
+  background-color: #999;
+  height: 3em;
+  -moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+  -khtml-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+  -webkit-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+}
+
+#header img#buckeye {
+  display: inline;
+  width: 2.2em;
+  vertical-align: middle;
+
+}
+
+#header h1 {
+  color: #fff;
+  text-shadow: 0 0 6px #000;
+  vertical-align: middle;
+  line-height: 1.5em;
+  margin:0 0 0 10px;
+  display: inline;
+  padding:0;
+}
+
+ul#navigation {
+  list-style-type: none;
+  float: right;
+  vertical-align: middle;
+  line-height: 3em;
+}
+
+ul#navigation li {
+  display: inline;
+  padding: .8em 15px .8em 16px;
+  margin-top: .1em;
+  height: 3em;
+}
+
+ul#navigation li a {
+  text-decoration: none;
+  color: #fff;
+  outline: none;
+  text-shadow: 0 1px 3px #222;
+}
+
+ul#navigation li a:hover {
+  text-shadow: -1px -1px 3px #222;
+}
+
+#content_wrapper {
+  -moz-box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  background-color: #FFF;
+  width: 60em;
+  margin: 0 auto;
+}
+
+
+img#logo {
+  width: 350px;
+  position: relative;
+  float: right;
+  z-index: 100;
+}
+
+
+#banner {
+  position: relative;
+  left: -15px;
+  top: 15px;
+  width: 62em;
+  height: 250px;
+  border-top: 1px solid #f2738c;
+  border-bottom: 1px solid #800303;
+  background-image: url(/images/banner_gradient.png);
+  background-repeat: repeat-x;
+	-moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+  -khtml-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+  -webkit-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+	z-index: 99; /* the stack order: foreground */
+  
+}
+
+#left_triangle {
+  border-color: transparent #800303 transparent transparent;
+	border-style:solid;
+	border-width:15px;
+	height:0px;
+	width:0px;
+	position: relative;
+	left: -30px;
+	top: 0;
+	z-index: -1; /* displayed under bubble */
+}
+
+#right_triangle {
+  border-color: transparent transparent transparent #800303;
+	border-style:solid;
+	border-width:17px;
+	height:0px;
+	width:0px;
+	position: relative;
+	left: 60em;
+	top: -32px;
+	z-index: -1; /* displayed under bubble */
+}
+
+div.actions {
+  bottom: 0;
+  position: relative;
+  top: 235px;
+  left: 125px;
+  width: 300px;
+}
+
+div.actions a.speak {
+  -moz-border-radius: 6px;
+  color: #FFF;
+  background-image: url(/images/speaker_gradient_static.png);
+  background-repeat: repeat-x;
+  text-shadow: 0px 1px 1px #444;
+  border: 1px solid #bfc1bf;
+}
+
+div.actions a.speak:hover {
+  background-image: url(/images/speaker_gradient.png);
+  background-repeat: repeat-x; 
+  text-shadow: 0px -1px 1px #444;
+  border: 1px solid #bfc1bf;
+}
+
+div.actions a.join {
+  -moz-border-radius: 6px;
+  margin-left: 30px;
+  border: 1px solid #3ecb33;
+  color: #FFF;
+  text-shadow: 0px 1px 1px #0d6806;
+  background-image: url(/images/join_gradient_static.png);
+  background-repeat: repeat-x;
+}
+
+div.actions a.join:hover {
+  background-image: url(/images/join_gradient.png);
+  background-repeat: repeat-x;
+  text-shadow: 0px -1px 1px #0d6806;
+  border: 1px solid #0aa33d;
+}
+
+a.button {
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  font-size: 1.0em;
+  outline: none;
+}
+
+div#tagline {
+  color: #FFF;
+  font-size: 1.5em;
+  line-height: 1.6em;
+  font-family: 'Georgia', Arial;
+  font-style: italic;
+  font-weight: lighter;
+  padding: 25px 35px 25px 35px;
+  text-shadow: 0px 0px 7px #000;
+}
+
+
+/* Begin Sticky Footer Hack */
+
+#footer {
+  position: relative;
+	margin: -150px auto 0 auto; 
+	height: 150px;
+	clear:both;
+  background-color: #333;
+  width: 60em;
+} 
+
+.clearfix:after { 
+  content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+* html .clearfix { 
+  height: 1%;
+}
+
+.clearfix {
+  display: block;
+}
+
+
+/* End Sticky Footer Hack */
+
+/* Begin Homepage Styles */
+
+div#page_content .events {
+  padding: 25px;
+}
+
+/* Begin Events Styles */
+
+.events h2 {
+  font-family: 'Georgia', serif; 
+  font-style: italic;
+  font-weight: lighter;
+  color: #C51134;
+  font-size: 1.0em;
+
+}
+
+/* End Events Styles */
+
+/* End Homepage Styles */
+
+
+/* Begin Errors and Flash Notice Styles */
+
+#flash_notice, #flash_error {
+  padding: 5px 8px;
+  margin: 10px 0;
+}
+
+#flash_notice {
+  background-color: #CFC;
+  border: solid 1px #6C6;
+}
+
+#flash_error {
+  background-color: #FCC;
+  border: solid 1px #C66;
+}
+
+.fieldWithErrors {
+  display: inline;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid #CF0000;
+  padding: 0px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 8px;
+}
+
+#errorExplanation ul {
+  margin: 2px 24px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: disc;
+}
+
+
+/* End Errors and Flash Notice Styles */

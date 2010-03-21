@@ -1,0 +1,7 @@
+<div class='comment'>
+  <h3><%= "#{comment.commenter} says: " %></h3>
+  <p>
+    <%= comment.body %>
+  </p>
+  <%= link_to 'Delete Comment', event_comment_path(comment.event, comment), :confirm => 'Word?!?', :method => :delete %>
+</div>

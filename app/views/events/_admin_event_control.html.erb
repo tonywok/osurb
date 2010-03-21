@@ -1,0 +1,9 @@
+<div class='admin_control_panel'>
+  <% unless @event.approved? %>
+    <%= link_to "Approve", approve_event_path(@event) %>
+  <% else %>
+    <%= link_to "Unapprove", unapprove_event_path(@event) %>
+  <% end %>
+</div>
+
+

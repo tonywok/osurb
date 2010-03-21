@@ -1,0 +1,41 @@
+
+<p>
+  <strong>What:</strong>
+  <%=h @event.what %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%=h @event.description %>
+</p>
+<p>
+  <strong>When:</strong>
+  <%=h @event.when %>
+</p>
+<p>
+  <strong>Where:</strong>
+  <%=h @event.where %>
+</p>
+<p>
+  <strong>Speaker:</strong>
+  <%=h @event.speaker_id %>
+</p>
+
+<p> 
+  <%= link_to 'Back', events_path %>
+  <%= admin_event_controls %>
+  <%= speaker_or_admin_event_controls(@event) %>
+</p>
+
+
+<div id='comments'>
+  <% @comments.each do |comment| %>
+    <%= render :partial => 'events/comment', :locals => { :comment => comment } %> 
+  <% end %>
+</div>
+<% form_for([@event, @comment]) do |f| %>
+  <%= f.label :commenter, 'Name:', :class => 'label' %>
+  <%= f.text_field :commenter, :class => 'input' %><br/>
+  <%= f.label :body, 'Thoughts:', :class => 'label' %>
+  <%= f.text_area :body, :class => 'input', :rows => '10' %><br/>
+  <%= f.submit 'Share Comment' %>
+<% end %>

@@ -1,0 +1,26 @@
+
+<table>
+  <tr>
+    <th>What</th>
+    <th>Description</th>
+    <th>Approved</th>
+    <th>When</th>
+    <th>Where</th>
+    <th>Speaker</th>
+  </tr>
+  <% for event in @events %>
+    <tr>
+      <td><%=h event.what %></td>
+      <td><%=h event.description %></td>
+      <td><%=h event.approved %></td>
+      <td><%=h event.when %></td>
+      <td><%=h event.where %></td>
+      <td><%=h event.speaker_id %></td>
+      <td><%= link_to "Show", event %></td>
+      <td><%= link_to "Edit", edit_event_path(event) %></td>
+      <td><%= link_to "Destroy", event, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Event", new_event_path %></p>
