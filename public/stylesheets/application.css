@@ -29,6 +29,7 @@ body > #wrap {
   width: 60em;
   background-color: #999;
   height: 3em;
+  border-bottom: 1px solid #333;
   -moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
   -khtml-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
   -webkit-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);

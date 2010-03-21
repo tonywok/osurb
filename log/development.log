@@ -19222,3 +19222,20 @@ Rendering home/index
 Rendered home/_banner (0.7ms)
   [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'f031022464a61a7a7ceb48b3a5ddb5be9b7ab7be') LIMIT 1[0m
 Completed in 22ms (View: 11, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-03-20 22:18:37) [GET]
+  [4;36;1mEvent Load (0.9ms)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."approved" = 't') [0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_banner (0.7ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'f031022464a61a7a7ceb48b3a5ddb5be9b7ab7be') LIMIT 1[0m
+Completed in 27ms (View: 16, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing EventsController#index (for 127.0.0.1 at 2010-03-20 22:19:33) [GET]
+  [4;36;1mEvent Load (1.3ms)[0m   [0;1mSELECT * FROM "events" [0m
+Rendering template within layouts/application
+Rendering events/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'f031022464a61a7a7ceb48b3a5ddb5be9b7ab7be') LIMIT 1[0m
+Completed in 37ms (View: 28, DB: 2) | 200 OK [http://localhost/events]
