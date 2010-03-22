@@ -144,8 +144,8 @@ div.actions {
 }
 
 div.actions a.speak {
-  -moz-border-radius: 6px;
   color: #FFF;
+  -moz-border-radius: 6px;
   background-image: url(/images/speaker_gradient_static.png);
   background-repeat: repeat-x;
   background-color: #AFB4B1;
@@ -205,13 +205,9 @@ h3 {
   font-weight: lighter;
   font-style: italic;
   margin-bottom: 20px;
-  color: #a7a7a7;
-}
-
-div#events {
-  width: 37em;
-  margin: 0 25px 0 25px;
-  padding-bottom: 25px;
+  color: #333;
+  font-size: 24px;
+  font-style: underline;
 }
 
 div.event h1 {
@@ -232,11 +228,86 @@ div.event h4 {
 }
 
 div.event p {
-  margin-bottom: 35px;
   color: #222;
+  margin-bottom: 10px;
+}
+
+div.event h5 {
+  color: #888;
+  margin-bottom: 35px;
+  font-style: italic;
+  font-weight: lighter;
+  font-family: 'Times', Arial, Serif;
+}
+
+div.event h5 a {
+  color: #666;
+}
+
+div.event h5 a:hover {
+  color: #444;
+}
+
+div#page_content .events {
+  padding: 25px;
+}
+
+
+.events h2 {
+  font-family: 'Georgia', serif; 
+  font-style: italic;
+  font-weight: lighter;
+  color: #C51134;
+  font-size: 1.0em;
+}
+
+div#events {
+  width: 35em;
+  margin: 0 25px 0 25px;
+  padding-bottom: 25px;
+  float: left;
 }
 
 /* end styling events */
+
+/* start call to action */
+
+div#call_to_action {
+  float: right;
+  width: 18em;
+  margin: 0 25px 25px 0;
+  padding-left: 25px;
+  border-left: 1px solid #e5e5e5;
+}
+
+div#students_cta, div#professional_cta {
+  background: -webkit-gradient(linear, left top, left 25, from(#000000), to(#FFFFFF));  
+  -moz-border-radius: 6px;
+  background: -moz-linear-gradient(top, #dbdbdb, #FFFFFF 200px);
+  padding: 15px;
+  margin-bottom: 25px;
+}
+
+div#call_to_action h4 {
+  color: #444;
+  margin-bottom: 10px;
+  font-weight: lighter;
+  font-size: 1.5;
+}
+
+div#call_to_action p {
+  font-size: .85em;
+  color: #222;
+  line-height: 1.25em;
+}
+
+div#call_to_action img {
+  vertical-align: middle;
+  width: 30px;
+}
+
+
+/* end call to action */
 
 /* Begin Sticky Footer Hack */
 
@@ -247,6 +318,10 @@ div.event p {
 	clear:both;
   background-color: #333;
   width: 60em;
+  border-top: 1px solid #777;
+  -moz-box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  -khtml-box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0 0 8px rgba(0,0,0,0.3);
 } 
 
 .clearfix:after { 
@@ -271,28 +346,6 @@ div.event p {
 
 
 /* End Sticky Footer Hack */
-
-/* Begin Homepage Styles */
-
-div#page_content .events {
-  padding: 25px;
-}
-
-/* Begin Events Styles */
-
-.events h2 {
-  font-family: 'Georgia', serif; 
-  font-style: italic;
-  font-weight: lighter;
-  color: #C51134;
-  font-size: 1.0em;
-
-}
-
-/* End Events Styles */
-
-/* End Homepage Styles */
-
 
 /* Begin Errors and Flash Notice Styles */
 
@@ -351,3 +404,7 @@ div#page_content .events {
 
 
 /* End Errors and Flash Notice Styles */
+
+.clear {
+  clear: both;
+}

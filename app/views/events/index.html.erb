@@ -9,8 +9,35 @@
       <h1><%= link_to "#{event.what}", event_path(event) %></h1>
       <h4><%= "7pm @ #{event.where} w/ #{event.speaker.name}" %></h4>
       <p><%= "#{event.description}" %></p>
-      <h5><%= "#{event.comments.count} Comments " %>
+      <h5><%= "(#{event.comments.count} Comments)" %> <%= link_to "Add Comment", event_path(event) %></h5>
     </div>
   <% end %>
 </div>
+
+
+<div id='call_to_action'>
+  <h3>Get Involved!</h3>
+  <div id='students_cta'>
+    <h4><%= image_tag '/images/buckeye.png' %>  Hey Students!</h4>
+    <p>
+      We usually meet once a week for about an hour, but sometimes
+      end up kickin' it for a an additional hour or two. We are currently
+      working on getting more student and professional speakers 
+      involved. Come to learn, speak or just hang out. 
+      <%= link_to 'Sign up', new_user_path %> and 
+      check out the resources page!
+    </p>
+  </div>
+
+  <div id='professional_cta'>
+    <h4><%= image_tag '/images/buckeye.png' %>  Hey Professionals!</h4>
+    <p>
+      Looking to give back to the community and help some undergrads
+      along the way? Well this is a perfect opportunity! We are 
+      currently looking for speakers for just about any topic. We
+      aren't limited to just RoR either, inquire <%= link_to 'here', new_event_path %>
+    </p>
+  </div>
+</div>
+<div class='clear'></div>
 
