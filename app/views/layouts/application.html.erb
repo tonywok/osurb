@@ -36,10 +36,6 @@
         <%- end -%>
         
 
-         <% if signed_in? %>
-          <%= current_user.email %>
-         <% end %>
-
          <div id='page_content'>
           <%= yield %>
          </div>

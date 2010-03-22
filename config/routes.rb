@@ -10,7 +10,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :home
   Clearance::Routes.draw(map)
 
-  map.root :controller => 'home', :action => 'index'
+  map.root :controller => 'events'
   map.home ':page', :controller => 'home', :action => 'show', :page => /|/
   
   # The priority is based upon order of creation: first created -> highest priority.
