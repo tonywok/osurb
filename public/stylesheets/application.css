@@ -120,8 +120,10 @@ img#logo {
 	width:0px;
 	position: relative;
 	left: -30px;
+  right: 30px;
 	top: 0;
 	z-index: -1; /* displayed under bubble */
+  padding-right: 0px;
 }
 
 #right_triangle {
@@ -131,8 +133,9 @@ img#logo {
 	height:0px;
 	width:0px;
 	position: relative;
-	left: 60em;
 	top: -32px;
+  margin-right:0px;
+  left:60em;
 	z-index: -1; /* displayed under bubble */
 }
 
@@ -146,6 +149,7 @@ div.actions {
 div.actions a.speak {
   color: #FFF;
   -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
   background-image: url(/images/speaker_gradient_static.png);
   background-repeat: repeat-x;
   background-color: #AFB4B1;
@@ -162,6 +166,7 @@ div.actions a.speak:hover {
 
 div.actions a.join {
   -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
   margin-left: 30px;
   border: 1px solid #3ecb33;
   color: #FFF;
@@ -189,6 +194,7 @@ div#tagline {
   color: #FFF;
   font-size: 1.5em;
   line-height: 1.6em;
+  width: 30em;
   font-family: 'Georgia', Arial;
   font-style: italic;
   font-weight: lighter;
@@ -281,8 +287,9 @@ div#call_to_action {
 }
 
 div#students_cta, div#professional_cta {
-  background: -webkit-gradient(linear, left top, left 25, from(#000000), to(#FFFFFF));  
+  background: -webkit-gradient(linear, left top, left 200, from(#dbdbdb), to(#FFFFFF));  
   -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
   background: -moz-linear-gradient(top, #dbdbdb, #FFFFFF 200px);
   padding: 15px;
   margin-bottom: 25px;
