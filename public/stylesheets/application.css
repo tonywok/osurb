@@ -194,7 +194,8 @@ div#tagline {
   color: #FFF;
   font-size: 1.5em;
   line-height: 1.6em;
-  width: 30em;
+  width: 22em;
+  float: left;
   font-family: 'Georgia', Arial;
   font-style: italic;
   font-weight: lighter;
