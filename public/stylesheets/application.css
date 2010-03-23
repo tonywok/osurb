@@ -91,6 +91,8 @@ img#logo {
   width: 350px;
   position: relative;
   float: right;
+  top: -30px;
+  left: -1em;
   z-index: 100;
 }
 
@@ -194,7 +196,7 @@ div#tagline {
   color: #FFF;
   font-size: 1.5em;
   line-height: 1.6em;
-  width: 22em;
+  width: 23.5em;
   float: left;
   font-family: 'Georgia', Arial;
   font-style: italic;
