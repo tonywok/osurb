@@ -79,6 +79,8 @@ ul#navigation li a:hover {
 
 #content_wrapper {
   -moz-box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  -khtml-box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0 0 8px rgba(0,0,0,0.3);
   background-color: #FFF;
   width: 60em;
   margin: 0 auto;
