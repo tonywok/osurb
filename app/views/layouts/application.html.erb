@@ -12,13 +12,13 @@
     <div id='header'>
         <h1>osu.rb</h1>
         <ul id='navigation'>
-          <li><%= link_to 'Home', '#' %></li>
+          <li><%= link_to 'Home', root_path %></li>
           <li><%= link_to 'Resources', '#' %></li>
           <li><%= link_to 'Contact', '#' %></li>
           <% if signed_in? %>
-          <li><%= link_to 'Logout', '#' %></li> 
+          <li><%= link_to 'Logout', sign_out_path %></li> 
           <% else %>
-          <li><%= link_to 'Login', '#' %></li>
+          <li><%= link_to 'Login', sign_in_path %></li>
           <% end %>
         </ul>
     </div>
