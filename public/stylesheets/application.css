@@ -307,11 +307,10 @@ a:hover {
   }
  
   div.announcement h1 {
-    color: #FFF;
+    color: #FFA000;
     font-family: Helvetica,Arial,sans-serif;
     font-weight: lighter;
     text-decoration: none;
-    text-shadow: 0 0 3px #000;
     margin-bottom: 10px;
   }
 
