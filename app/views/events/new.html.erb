@@ -1,4 +1,13 @@
 
-<%= render :partial => 'form' %>
+<h1>Propose an Event!</h1>
+<p> 
+  First and foremost, we'd like to thank you for time, and well, being 
+  awesome. So, here's how it works. Upon submission, the proposal will
+  enter an approval state. This is merely a formality, we're sure your
+  talk will be wonderful.
+</p>
+<div id='new_event'>
+  <%= render :partial => 'form' %>
+</div>
 
 <%= link_to "Back to List", events_path %>

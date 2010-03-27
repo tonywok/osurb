@@ -1,8 +1,12 @@
 
   <div id='banner'>
     <div class='actions'>
-      <%= link_to 'Volunteer', '#', :class => 'button speak' %>
-      <%= link_to 'Join In!', '#', :class => 'button join' %>
+      <%= link_to 'Propose Event', new_event_path, :class => 'button speak' %>
+      <% if !signed_in? %>
+      <%= link_to 'Join In!', sign_up_path, :class => 'button join' %>
+      <% else %>
+      <%= link_to 'Discuss!', 'http://groups.google.com/group/studioctrubywebdev', :class => 'button join' %>
+      <% end %>
     </div>
     
     <%= image_tag '/images/osurb.png', :id => 'logo' %>

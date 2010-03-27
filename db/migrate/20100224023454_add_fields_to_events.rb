@@ -3,7 +3,7 @@ class AddFieldsToEvents < ActiveRecord::Migration
     add_column :events, :what, :string
     add_column :events, :description, :text
     add_column :events, :approved, :boolean, :default => false
-    add_column :events, :when, :date
+    add_column :events, :when, :date_time
     add_column :events, :where, :string
     add_column :events, :speaker_id, :integer
   end

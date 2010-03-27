@@ -1,6 +1,9 @@
 class HomeController < ApplicationController
   def index
-    @upcoming_events = Event.upcoming
+    @events = Event.approved
+    @announcements = Announcement.all
+    @listings = @events + @announcements
+    @listings = @listings.sort_by { |listing| listing.created_at }.reverse!
   end
 
   def show

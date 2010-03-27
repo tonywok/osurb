@@ -5,13 +5,13 @@ ActionController::Routing::Routes.draw do |map|
   map.approve_event '/approve_event/:id', :controller => 'events', :action => 'approve'
   map.unapprove_event '/unapprove_event/:id', :controller => 'events', :action => 'unapprove'
   map.resources :events, :has_many => :comments
+  map.resources :announcements, :has_many => :comments
   map.check_avaliability '/check_avaliability.:format', :controller => 'users', :action => 'check_avaliability', :conditions => { :method => :get }
   map.resources :users
-  map.resources :home
   Clearance::Routes.draw(map)
 
-  map.root :controller => 'events'
-  map.home ':page', :controller => 'home', :action => 'show', :page => /|/
+  map.home ':page', :controller => 'home', :action => 'show', :page => /resources|contact/
+  map.root :controller => 'home'
   
   # The priority is based upon order of creation: first created -> highest priority.
 

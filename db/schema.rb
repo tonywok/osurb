@@ -9,13 +9,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100225022806) do
+ActiveRecord::Schema.define(:version => 20100327203031) do
+
+  create_table "announcements", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "comments", :force => true do |t|
     t.string   "commenter"
     t.text     "body"
     t.integer  "event_id"
     t.integer  "user_id"
+    t.integer  "announcement_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -26,7 +34,7 @@ ActiveRecord::Schema.define(:version => 20100225022806) do
     t.string   "what"
     t.text     "description"
     t.boolean  "approved",    :default => false
-    t.date     "when"
+    t.time     "when"
     t.string   "where"
     t.integer  "speaker_id"
   end

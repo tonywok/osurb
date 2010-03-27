@@ -12,9 +12,9 @@
     <div id='header'>
         <h1>osu.rb</h1>
         <ul id='navigation'>
-          <li><%= link_to 'Home', root_path %></li>
-          <li><%= link_to 'Resources', '#' %></li>
-          <li><%= link_to 'Contact', '#' %></li>
+          <li class='active'><%= link_to 'Home', root_path %></li>
+          <li><%= link_to 'Resources', home_path(:resources) %></li>
+          <li><%= link_to 'Contact', home_path(:contact) %></li>
           <% if signed_in? %>
           <li><%= link_to 'Logout', sign_out_path %></li> 
           <% else %>
@@ -25,11 +25,13 @@
     <div id='container' class='clearfix'>
       <div id='content_wrapper'>
         
-        <%= yield :banner %>
 
         <%- flash.each do |name, msg| -%>
           <%= content_tag :div, msg, :id => "flash_#{name}" %>
         <%- end -%>
+
+
+        <%= yield :banner %>
         
         <%- if show_title? -%>
           <h1><%=h yield(:title) %></h1>

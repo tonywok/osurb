@@ -5,6 +5,7 @@ class CreateComments < ActiveRecord::Migration
       t.text :body
       t.references :event
       t.references :user
+      t.references :announcement
       t.timestamps
     end
   end

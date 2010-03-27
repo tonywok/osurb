@@ -5,4 +5,5 @@ class UsersController < Clearance::UsersController
       format.json { render :json => {:result => result}.to_json } 
     end
   end
+
 end
