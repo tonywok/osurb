@@ -116,6 +116,7 @@ a:hover {
     height: 250px;
     border-top: 1px solid #f2738c;
     border-bottom: 1px solid #800303;
+    background-color: red;
     background-image: url(/images/banner_gradient.png);
     background-repeat: repeat-x;
     -moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
