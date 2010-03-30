@@ -2,14 +2,14 @@
   <%= render :partial => 'banner' %>
 <% end %>
 
-<div id='events'>
+<div class='events'>
   <h3>Events and Announcements</h3>
   <% @listings.each do |listing| %>
     <% if listing.class.name == "Event" %>
       <div class='event'>
         <h1><%= link_to "#{listing.what}", event_path(listing) %></h1>
         <h4><%= "7pm @ #{listing.where} w/ #{listing.speaker.name}" %></h4>
-        <p><%= "#{listing.description}" %></p>
+        <p><%= truncate("#{listing.description}", 300, "...(" + link_to('more', event_path(listing)) + ")") %></p>
         <h5><%= "(#{listing.comments.count} Comments)" %> <%= link_to "Add Comment", event_path(listing) %></h5>
       </div>
     <% else %>
@@ -33,8 +33,7 @@
       end up kickin' it for a an additional hour or two. We are currently
       working on getting more student and professional speakers 
       involved. Come to learn, speak or just hang out. 
-      <%= link_to 'Sign up', sign_up_path %> and 
-      check out the resources page!
+      <%= link_to 'Sign up', sign_up_path %>.
     </p>
   </div>
 
@@ -44,7 +43,7 @@
       Looking to give back to the community and help some undergrads
       along the way? Well this is a perfect opportunity! We are 
       currently looking for speakers for just about any topic. We
-      aren't limited to just RoR either, inquire <%= link_to 'here', new_event_path %>
+      aren't limited to just RoR either, inquire <%= link_to 'here', new_event_path %>.
     </p>
   </div>
 </div>

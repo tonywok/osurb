@@ -1,41 +1,47 @@
 
-<p>
-  <strong>What:</strong>
-  <%=h @event.what %>
-</p>
-<p>
-  <strong>Description:</strong>
-  <%=h @event.description %>
-</p>
-<p>
-  <strong>When:</strong>
-  <%=h @event.when %>
-</p>
-<p>
-  <strong>Where:</strong>
-  <%=h @event.where %>
-</p>
-<p>
-  <strong>Speaker:</strong>
-  <%=h @event.speaker_id %>
-</p>
+<div class='twenty_five_top'>
+  <p> 
+    <%= admin_event_controls %>
+    <%= speaker_or_admin_event_controls(@event) %>
+  </p>
+  <div class='events'>
+    <div class='event'>
+      <h1><%= link_to "#{@event.what}", event_path(@event) %></h1>
+      <h4><%= "7pm @ #{@event.where} w/ #{@event.speaker.name}" %></h4>
+      <p><%= "#{@event.description}" %></p>
+    </div>
+  </div>
 
-<p> 
-  <%= link_to 'Back', events_path %>
-  <%= admin_event_controls %>
-  <%= speaker_or_admin_event_controls(@event) %>
-</p>
 
+  <div id='call_to_action' class='twentyfive_margin_top'>
+    <div class='speaker_info'>
+      <h4><%= image_tag '/images/buckeye.png' %>  Speaker Bio</h4>
+      <p>
+        <%= @event.speaker.bio %>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class='clear'></div>
 
 <div id='comments'>
   <% @comments.each do |comment| %>
     <%= render :partial => 'events/comment', :locals => { :comment => comment } %> 
   <% end %>
 </div>
-<% form_for([@event, @comment]) do |f| %>
-  <%= f.label :commenter, 'Name:', :class => 'label' %>
-  <%= f.text_field :commenter, :class => 'input' %><br/>
-  <%= f.label :body, 'Thoughts:', :class => 'label' %>
-  <%= f.text_area :body, :class => 'input', :rows => '10' %><br/>
-  <%= f.submit 'Share Comment' %>
+<% if signed_in? %>
+  <div id='new_comment'>
+    <% form_for([@event, @comment]) do |f| %>
+      <%= f.label :commenter, 'Name:', :class => 'label' %>
+      <%= f.text_field :commenter, :class => 'input' %><br/>
+      <%= f.label :body, 'Thoughts:', :class => 'label' %>
+      <%= f.text_area :body, :class => 'input', :rows => '10' %><br/>
+      <%= f.submit 'Share Comment' %>
+    <% end %>
+  </div>
+<% else %>
+  <div class='ask'>
+    <%= link_to 'Login', sign_in_path %> or <%= link_to 'Sign up', sign_up_path %> to Comment!
+  </div>
 <% end %>

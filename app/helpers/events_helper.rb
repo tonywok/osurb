@@ -14,4 +14,8 @@ module EventsHelper
       end
     end
   end
+
+  def commenter_or_admin?(comment)
+    (signed_in? && current_user == comment.user) || current_user.admin?
+  end
 end

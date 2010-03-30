@@ -3,5 +3,7 @@
   <p>
     <%= comment.body %>
   </p>
-  <%= link_to 'Delete Comment', event_comment_path(comment.event, comment), :confirm => 'Word?!?', :method => :delete %>
+  <% if commenter_or_admin?(comment) %>
+    <%= link_to 'Delete Comment', event_comment_path(comment.event, comment), :confirm => 'Word?!?', :method => :delete %>
+  <% end %>
 </div>

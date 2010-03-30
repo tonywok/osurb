@@ -5,7 +5,7 @@ class EventsController < ApplicationController
   before_filter :speaker_or_admin, :only => [:edit, :update, :destroy]
 
   def index
-    @events = Event.all
+    @events = Event.approved
   end
   
   def show
