@@ -17,7 +17,7 @@
         <%= image_tag '/images/warning.png' %>
         <h1><%= listing.title %></h1>
         <p><%= listing.description %></p>
-        <h5><%= "(#{listing.comments.count} Comments)" %> <%= link_to "Add Comment", announcement_path(listing) %></h5>
+        <h5><%- "(#{listing.comments.count} Comments)" %> <%- link_to "Add Comment", announcement_path(listing) %></h5>
       </div>
     <% end %>
   <% end %>
