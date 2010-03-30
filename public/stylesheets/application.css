@@ -364,6 +364,11 @@ div#call_to_action img {
   width: 30px;
 }
 
+div#comments_container {
+  background-color: #800303;
+  padding: 30px;
+}
+
 
 /* end call to action */
 
@@ -392,7 +397,16 @@ form input {
 
 form input.create, form input.submit {
   width: 100px;
-  margin-left: 206px;
+  margin-left: 231px;
+  margin-top: 25px;
+}
+
+form label.white {
+  color: #fff;
+}
+
+form input.input {
+  width: 231px;
 }
 
 form label {

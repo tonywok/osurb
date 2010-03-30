@@ -25,23 +25,32 @@
 
 <div class='clear'></div>
 
-<div id='comments'>
-  <% @comments.each do |comment| %>
-    <%= render :partial => 'events/comment', :locals => { :comment => comment } %> 
-  <% end %>
-</div>
-<% if signed_in? %>
-  <div id='new_comment'>
-    <% form_for([@event, @comment]) do |f| %>
-      <%= f.label :commenter, 'Name:', :class => 'label' %>
-      <%= f.text_field :commenter, :class => 'input' %><br/>
-      <%= f.label :body, 'Thoughts:', :class => 'label' %>
-      <%= f.text_area :body, :class => 'input', :rows => '10' %><br/>
-      <%= f.submit 'Share Comment' %>
+<div id='comments_container'>
+  <div id='comments'>
+    <% if @event.comments.length == 0 %>
+      <div class='comment'>
+        <p>
+          Not a peep. Be the first, yo.
+        </p>
+      </div>
+    <% end %>
+    <% @comments.each do |comment| %>
+      <%= render :partial => 'events/comment', :locals => { :comment => comment } %> 
     <% end %>
   </div>
-<% else %>
-  <div class='ask'>
-    <%= link_to 'Login', sign_in_path %> or <%= link_to 'Sign up', sign_up_path %> to Comment!
-  </div>
-<% end %>
+  <% if signed_in? %>
+    <div id='new_comment'>
+      <% form_for([@event, @comment]) do |f| %>
+        <%= f.label :commenter, 'Name:', :class => 'label white' %>
+        <%= f.text_field :commenter, :class => 'input' %><br/>
+        <%= f.label :body, 'Thoughts:', :class => 'label white' %>
+        <%= f.text_area :body, :class => 'input', :rows => '10' %><br/>
+        <%= f.submit 'Share', :class=>'create' %>
+      <% end %>
+    </div>
+  <% else %>
+    <div class='ask'>
+      <%= link_to 'Login', sign_in_path %> or <%= link_to 'Sign up', sign_up_path %> to Comment!
+    </div>
+  <% end %>
+</div>
