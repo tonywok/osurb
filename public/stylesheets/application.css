@@ -369,6 +369,12 @@ div#comments_container {
   padding: 30px;
 }
 
+div.comment {
+  padding: 15px 10px 15px 10px;
+  background-color: #800303;
+  width: 35.5em;
+  margin-bottom: 10px;
+}
 
 
 /* end call to action */
